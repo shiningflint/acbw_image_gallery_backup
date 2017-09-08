@@ -1,4 +1,7 @@
 Aws.config.update({
-  region: 'region_bacon',
-  credentials: Aws::Credentials.new('id_banana', 'secret_potato')
+  region: '<%= ENV["AWS_S3_REGION"] %>',
+  credentials: Aws::Credentials.new('<%= ENV["AWS_S3_ID"] %>', '<%= ENV["AWS_S3_KEY"] %>')
 })
+
+# uncomment below when testing with windows
+# Aws.use_bundled_cert!
