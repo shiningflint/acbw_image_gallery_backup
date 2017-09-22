@@ -1,1 +1,13 @@
-<h1>Bananas!</h1>
+<ul>
+  <% @lists.each do |list| %>
+  <li class="list-item">
+    <p class="img-element">
+      <img src="<%= "https://s3-ap-southeast-1.amazonaws.com/acbw/#{list}" %>"
+      class="image">
+    </p>
+    <p class="url-element">
+      https://s3-ap-southeast-1.amazonaws.com/acbw/<%= list %>
+    </p>
+  </li>
+  <% end %>
+</ul>
